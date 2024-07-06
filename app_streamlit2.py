@@ -70,8 +70,8 @@ for column in df.select_dtypes(include=['object']).columns:
 
 # Charger le modèle entraîné
 # Sauvegarder le modèle entraîné
-#joblib.dump(model, 'model.pkl')
-#model = joblib.load('model.pkl')
+joblib.dump(model, 'model.pkl')
+model = joblib.load('model.pkl')
 
 # Titre de l'application
 st.title("Prédiction")
