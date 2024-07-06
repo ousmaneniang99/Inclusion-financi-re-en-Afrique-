@@ -36,7 +36,7 @@ df=data.copy()
 df.bank_account.unique()
 
 # voyons la repartition des deux types de personnes
-%matplotlib inline
+#%matplotlib inline
 plt.xlabel('compte')
 plt.ylabel('nombre de personnes')
 plt.bar(df.bank_account, height=0.3)
