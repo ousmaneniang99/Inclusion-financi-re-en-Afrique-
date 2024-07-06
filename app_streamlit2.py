@@ -67,6 +67,27 @@ for column in df.select_dtypes(include=['object']).columns:
     df[column] = label_encoder.fit_transform(df[column])
 
 
+# choix du features  et de la variable cible 
+X = df.drop(columns=['bank_account'], axis=1)
+y = df['bank_account']
+
+# Division des données en ensembles d'entraînement et de test
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Créer un modèle RandomForestClassifier
+model = RandomForestClassifier(random_state=42)
+
+# Entraînement le modèle
+model.fit(X_train, y_train)
+
+# prédictions sur l'ensemble de test
+y_pred = model.predict(X_test)
+
+# Évaluation du modèle
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy:.2f}")
+print(classification_report(y_test, y_pred))
+
 
 # Charger le modèle entraîné
 # Sauvegarder le modèle entraîné
