@@ -16,7 +16,7 @@ from sklearn.linear_model import LogisticRegression
 
 
 #importation du dataset
-data=pd_read_csv('Financial_inclusion_dataset.csv')
+data=pd.read_csv('Financial_inclusion_dataset.csv')
 
 #data head()
 data.head()
