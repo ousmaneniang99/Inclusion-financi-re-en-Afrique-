@@ -91,8 +91,8 @@ print(classification_report(y_test, y_pred))
 
 # Charger le modèle entraîné
 # Sauvegarder le modèle entraîné
-joblib.dump(model, 'model.pkl')
-model = joblib.load('model.pkl')
+#joblib.dump(model, 'model.pkl')
+#model = joblib.load('model.pkl')
 
 # Titre de l'application
 st.title("Prédiction")
